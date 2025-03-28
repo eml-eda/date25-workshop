@@ -15,7 +15,7 @@ git clone https://github.com/eml-eda/match.git
 
 2. Build the workshop's docker image:
 ```bash
-docker build -t match_date25 -f date25-workshop/docker/Dockerfile .
+docker build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) -t match_date25 -f date25-workshop/docker/Dockerfile .
 ```
 
 3. Run the following command to mount the match folder in the docker container and build MATCH's fork of TVM. This will take a while, but is only needed the first time.
@@ -34,4 +34,4 @@ docker run -it --rm -p 8888:8888 -v ./match:/match -v ./date25-workshop:/date25-
     jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
 ```
 
-5. Open the URL shown in the terminal in your browser (the one with address `http://127.0.0.1:8888/?token=...`) and open the `workshop.ipynb` notebook.
+5. Open the URL shown in the terminal in your browser (the one with address `http://127.0.0.1:8888/?token=...`) and open the `workshop.ipynb` notebook. If `http://127.0.0.1:8888/?token=...` does not work try ``localhost:8888/?token=...`
