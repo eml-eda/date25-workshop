@@ -1,5 +1,5 @@
 # DATE 2025 (W07.4)
-## Pushing TinyML Forward: End-to-end In-Memory RISC-V Computing
+## Pushing TinyML Forward: End-to-end Near-Memory RISC-V Computing
 
 This repository contains the notebook shown during the workshop's demo. While running the final model requires the hardware setup, the notebook can be used as an example of how to extend the MATCH compiler to support new accelerators.
 
